@@ -1,0 +1,136 @@
+proj_dir: /home/klam/seq_artifacts
+
+tmp_dir: tmp
+data_dir: data
+genome_dir: hg38
+giab_dir: GIAB/GRCh38/HG001_NA12878
+sra_dir: sra
+bedfiles_dir: bedfiles
+outputs_dir: results/outputs
+
+genome_file: hg38.fa
+adapters_file: adapters/TruSeq3-PE-2.fa
+giab_bed_file: NA12878_HG001_GRCh38_GIAB.bed
+giab_hc_variants_file: NA12878_HG001_GRCh38_GIAB.vcf
+sra_list_txt: sra.txt
+multiqc_config_file: config/multiqc_config.yaml
+
+sort_order: coordinate
+allele_freq: "0.01"
+
+
+samples:
+    sra1:
+        sample: ERR1831349
+        exome_bedfile: agilentSureSelectv5.sorted.bed
+        platform: BGISEQ
+        sequencer: BGISEQ-500
+    sra2:
+        sample: ERR1831346
+        exome_bedfile: agilentSureSelectv5.sorted.bed
+        platform: BGISEQ
+        sequencer: BGISEQ-500
+    sra3:
+        sample: ERR1831347
+        exome_bedfile: agilentSureSelectv5.sorted.bed
+        platform: BGISEQ
+        sequencer: BGISEQ-500
+    sra4:
+        sample: ERR1831348
+        exome_bedfile: agilentSureSelectv5.sorted.bed
+        platform: BGISEQ
+        sequencer: BGISEQ-500
+    sra5:
+        sample: ERR1831350
+        exome_bedfile: agilentSureSelectv5.sorted.bed
+        platform: BGISEQ
+        sequencer: BGISEQ-500
+    sra6:
+        sample: ERR1831351
+        exome_bedfile: agilentSureSelectv5.sorted.bed
+        platform: BGISEQ
+        sequencer: BGISEQ-500
+    sra7:
+        sample: ERR1831352
+        exome_bedfile: agilentSureSelectv5.sorted.bed
+        platform: BGISEQ
+        sequencer: BGISEQ-500
+    sra8:
+        sample: ERR1831353
+        exome_bedfile: agilentSureSelectv5.sorted.bed
+        platform: BGISEQ
+        sequencer: BGISEQ-500
+    sra9:
+        sample: SRR14724463
+        exome_bedfile: truseqDNAexome.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_NovaSeq_6000
+    sra10:
+        sample: SRR14724473
+        exome_bedfile: idt.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_NovaSeq_6000
+    sra11:
+        sample: SRR14724483
+        exome_bedfile: agilentSureSelectv7.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_NovaSeq_6000
+    sra12:
+        sample: SRR14724493
+        exome_bedfile: truseqDNAexome.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_HiSeq_4000
+    sra13:
+        sample: SRR14724503
+        exome_bedfile: idt.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_HiSeq_4000
+    sra14:
+        sample: SRR14724513
+        exome_bedfile: agilentSureSelectv7.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_HiSeq_4000
+    sra15:
+        sample: ERR1905889
+        exome_bedfile: agilentSureSelectv5.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_HiSeq_4000
+    sra16:
+        sample: ERR1905890
+        exome_bedfile: agilentSureSelectv5.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_HiSeq_4000
+    sra17:
+        sample: SRR2106344
+        exome_bedfile: nexteraRapidCapture.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_HiSeq_2500
+    sra18:
+        sample: SRR2106342
+        exome_bedfile: agilentSureSelectv5UTR.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_HiSeq_2500
+    sra19:
+        sample: DRR189730
+        exome_bedfile: agilentSureSelectXTHS.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_HiSeq_2500
+    sra20:
+        sample: DRR189731
+        exome_bedfile: agilentSureSelectXT.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_HiSeq_2500
+    sra21:
+        sample: DRR189732
+        exome_bedfile: kapa.sorted.bed
+        platform: ILLUMINA
+        sequencer: Illumina_HiSeq_2500
+
+
+
+
+
+
+
+
+

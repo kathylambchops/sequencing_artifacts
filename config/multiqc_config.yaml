@@ -1,0 +1,23 @@
+# Header information
+
+intro_text: 'Using HG001/NA12878 data from NCBI SRA Repository'
+report_header_info:
+  - Platform: 'Illumina'
+  - Strategy: 'Whole exome sequencing'
+  - Layout: 'Paired'
+  - Organism: 'Homo sapiens'
+
+# Module order
+
+module_order:
+  - fastqc:
+      name: 'FastQC'
+      anchor: 'fastqc'
+      path_filters:
+        - '*_[12]_fastqc.zip'
+  - fastqc:
+      name: 'FastQC (trimmed)'
+      anchor: 'fastqc_trimmed'
+      path_filters:
+        - '*_[12]_paired_fastqc.zip'
+        
