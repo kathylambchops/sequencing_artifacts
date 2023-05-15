@@ -1,0 +1,17 @@
+cluster:
+  sbatch
+    --time={cluster.time}
+    --mem={cluster.mem}
+    --cpus-per-task={threads}
+    --job-name={cluster.jobname}
+    --output={cluster.output}
+#    --ntasks={resources.tasks}
+#    --mem-per-cpu={resources.mem_mb_per_cpu}
+cluster-config: 'slurm/cluster.yaml'
+jobs: 37
+latency-wait: 120
+printshellcmds: True
+use-conda: True
+
+
+#local-cores: 8
