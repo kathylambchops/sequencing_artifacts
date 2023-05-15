@@ -11,7 +11,7 @@
 
 
 eval "$(conda shell.bash hook)"
-conda activate snakemake
+conda activate bfx_env
 # snakemake version: 7.21.0
 
 time snakemake --profile slurm
