@@ -33,9 +33,7 @@ Update the following configuration files:
 
 
 ## Results
-
 The outputs folder, specified by **outputs_dir** in [`config/config.yaml`](https://github.com/kathylambchops/sequencing_artifacts/blob/main/config/config.yaml), should have the following directory structure:
-
 ```
 /path/to/outputs
 ├── bedtools
@@ -49,10 +47,8 @@ The outputs folder, specified by **outputs_dir** in [`config/config.yaml`](https
 ```
 
 ## Resources
-
 All resources, including data and reference genome, must be placed inside the **resources** folder. Filepaths are written relative to it when specified in [`config/config.yaml`](https://github.com/kathylambchops/sequencing_artifacts/blob/main/config/config.yaml).
 The directory structure is as follows:
-
 ```
 /path/to/resources
 ├── adapters
