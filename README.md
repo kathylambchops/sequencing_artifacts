@@ -67,10 +67,20 @@ The directory structure is as follows:
 ## Machine Learning pipeline
 The `final.ipynb` notebook was developed to import the `get_metrics.py` module built for this project. All of the SRA VCF files were converted into individual Pandas data frames with the LSEQs and RSEQs. The flanking region metrics were computed and populated into the data frames. Some Artifact data exploration was also done here. The python module `get_metrics.py` was created to store all the functions that determines artifacts and computes flanking region metrics.  More information about how each function works can be found here: [Characterizing Sequencing Artifacts](https://scholarworks.sjsu.edu/cgi/viewcontent.cgi?article=2279&context=etd_projects).
 
-A Final data frame(s) used for ML is created using `ML_df_creation.ipynb`
+A final data frame(s) used for ML is created using `ML_df_creation.ipynb`
 
 The lazypredict package was used to build a lot of basic models without any parameter tuning to identify which top models would be used for additional ML tasks. You should have a final data frame you plan on using the lazypredict script for. Edit `lazy_predict.py` with the correct file that contains your final data frame, then run the script.
 To run the script using slurm:
 ```
 sbatch lazypredict.sh
 ```
+
+Predictive power and feature importance were determined using `predictive_power.py`.  This trains 1000 random forest models. Run as many times as needed to get enough coverage, in my case I ran 10 instances to get a total of 10000 models trained before determining feature importance.  Edit `predictive_power.py` with the correct file that contains your final data frame and change the output file name for each instance you run this script.
+To run the script using slurm:
+```
+sbatch predictive_power.sh
+```
+
+Join the predictive power subfiles together (if you ran multiple instances) so you are left with a single file before investigating predictive power. `LazypredictResults_InvestigatePredictivePower.ipynb` looks at the output from running `lazypredict.py` and/or `lazy_predict.sh`.  It also investigates feature importance.
+
+Finally, `ModelEvaluation.ipynb` evaluates model performance of all features, just the LSEQ/RSEQ features I calculate from `get_metrics.py`, only LSEQ/RSEQ features with 60% or greater predictive power based on `predictive_power.py`, and from LSEQ/RSEQ feature clustering based on a package called VarClusHi. 
