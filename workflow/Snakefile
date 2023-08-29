@@ -135,26 +135,26 @@ ALL_SRA_INTERSECT_FILES = expand(SRA_INTERSECT_FILE, sample=SAMPLES)
 ####################
 # CASE 3
 #####################
-CASE3_REGIONS_BED = f'{OUTPUTS_DIR}/case3/{{sample}}_case3_regions.bed'
-CASE3_COVERAGE_BED = f'{OUTPUTS_DIR}/case3/{{sample}}_case3_coverage.bed'
-ALL_COVERAGE_FILES = expand(CASE3_COVERAGE_BED, sample=SAMPLES)
+#CASE3_REGIONS_BED = f'{OUTPUTS_DIR}/case3/{{sample}}_case3_regions.bed'
+#CASE3_COVERAGE_BED = f'{OUTPUTS_DIR}/case3/{{sample}}_case3_coverage.bed'
+#ALL_COVERAGE_FILES = expand(CASE3_COVERAGE_BED, sample=SAMPLES)
 
-RG_COORD_SORTED_BAM_FILE = f'{OUTPUTS_DIR}/case3/{{sample}}_RG_aligned_coord_sorted.bam'
-ALL_RG_BAM_FILES = expand(RG_COORD_SORTED_BAM_FILE, sample=SAMPLES)
+#RG_COORD_SORTED_BAM_FILE = f'{OUTPUTS_DIR}/case3/{{sample}}_RG_aligned_coord_sorted.bam'
+#ALL_RG_BAM_FILES = expand(RG_COORD_SORTED_BAM_FILE, sample=SAMPLES)
 
 # Function to get platform from dictionary
-def get_platform(wc):
-    # Takes SRA number as input argument, returns platform
-    platform = sample_dict[str(wc)][1]
-    return platform
+#def get_platform(wc):
+#    # Takes SRA number as input argument, returns platform
+#    platform = sample_dict[str(wc)][1]
+#    return platform
 
 
 
-GATK_FILE = f'{OUTPUTS_DIR}/case3/{{sample}}_GATK.g.vcf'
-ALL_GATK_FILES = expand(GATK_FILE, sample=SAMPLES)
+#GATK_FILE = f'{OUTPUTS_DIR}/case3/{{sample}}_GATK.g.vcf'
+#ALL_GATK_FILES = expand(GATK_FILE, sample=SAMPLES)
 
 
-include: f'{RULES_DIR}/case3.smk'
+#include: f'{RULES_DIR}/case3.smk'
 
 
 ##############
@@ -181,9 +181,9 @@ rule all:
         ALL_VARDICT_FILES,
         ALL_GIAB_INTERSECT_FILES,
         ALL_SRA_INTERSECT_FILES,
-        ALL_COVERAGE_FILES,
-        ALL_RG_BAM_FILES,
-        ALL_GATK_FILES
+        ALL_COVERAGE_FILES
+        #ALL_RG_BAM_FILES,
+        #ALL_GATK_FILES
 
 #rule clean:
 #    shell:
