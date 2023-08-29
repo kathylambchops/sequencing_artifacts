@@ -31,8 +31,36 @@ Update the following configuration files:
   - **[config.yaml](https://github.com/kathylambchops/sequencing_artifacts/blob/main/slurm/config.yaml)**: Contains settings for running the pipeline using Slurm (_used in [`run_snakemake.sh`](https://github.com/kathylambchops/sequencing_artifacts/blob/main/run_snakemake.sh)_)
   - **[cluster.yaml](https://github.com/kathylambchops/sequencing_artifacts/blob/main/slurm/cluster.yaml)**: Contains settings for job submissions (_used in [`slurm/config.yaml`](https://github.com/kathylambchops/sequencing_artifacts/blob/main/slurm/config.yaml)_)
 
-## Outputs
+
+## Results
+
+The outputs folder, specified by **outputs_dir** in [`config/config.yaml`](https://github.com/kathylambchops/sequencing_artifacts/blob/main/config/config.yaml), should have the following directory structure:
+
+```
+/path/to/outputs
+├── bedtools
+├── bwa
+├── fastqc
+├── logs
+├── multiqc
+├── picard
+├── vardict
+└── trimmomatic
+```
 
 ## Resources
 
-## Results
+All resources, including data and reference genome, must be placed inside the **resources** folder. Filepaths are written relative to it when specified in [`config/config.yaml`](https://github.com/kathylambchops/sequencing_artifacts/blob/main/config/config.yaml).
+The directory structure is as follows:
+
+```
+/path/to/resources
+├── adapters
+├── bedfiles
+├── data
+├── GIAB
+├── hg38
+└── sra
+```
+
+
