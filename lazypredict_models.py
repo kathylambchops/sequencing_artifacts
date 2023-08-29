@@ -32,6 +32,7 @@ import lightgbm
 
 ####################
 
+# Enter the path to your DF here that will be used for ML
 df = pd.read_pickle('ML_df.pkl')
 
 ####################
