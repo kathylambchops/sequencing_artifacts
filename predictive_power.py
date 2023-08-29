@@ -34,6 +34,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import ExtraTreesClassifier
 from random import shuffle
 
+# Put your final dataframe used for ML here
 #df = pd.read_pickle('ML_df.pkl')
 df = pd.read_pickle('ML_df_joined_LR_feats.pkl')
 #df = pd.read_pickle('ML_df_add_LR_feats.pkl')
@@ -120,7 +121,7 @@ for i in range(1000):
     except Exception as e:
         print(e)
    
-
+# change file name here for every instance you run this script to get subfiles
 with open('pp9_joined_LR_feats_bsF.pkl', 'wb') as f:
     # Pickle the 'data' dictionary using the highest protocol available.
     # Keeps object type during pickling
